@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{88DC8CEB-2646-454B-A799-0DAF76E7FD30}</ProjectGuid>
+    <RootNamespace>PinTools</RootNamespace>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\build\PinTools\</OutDir>
+    <IntDir>..\build\PinTools\</IntDir>
+    <NMakeBuildCommandLine>set VCINSTALLDIR=$(VCInstallDir)
+set VSINSTALLDIR=$(VSInstallDir)
+set WindowsSdkDir=$(FrameworkSDKDir)
+nmake DEBUG=1 TARGET=ia32</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>set VCINSTALLDIR=$(VCInstallDir)
+set VSINSTALLDIR=$(VSInstallDir)
+set WindowsSdkDir=$(FrameworkSDKDir)
+nmake DEBUG=1 TARGET=ia32 clean
+nmake DEBUG=1 TARGET=ia32</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>set VCINSTALLDIR=$(VCInstallDir)
+set VSINSTALLDIR=$(VSInstallDir)
+set WindowsSdkDir=$(FrameworkSDKDir)
+nmake clean TARGET=ia32 </NMakeCleanCommandLine>
+    <NMakeOutput>..\build\Source\pin\pin-windows-ia32\pin.exe</NMakeOutput>
+    <IncludePath>..\..\include\pin\gen;..\..\include\pin;$(IncludePath)</IncludePath>
+    <NMakePreprocessorDefinitions>TARGET_WINDOWS;TARGET_IA32</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\build\PinTools\</OutDir>
+    <IntDir>..\build\PinTools\</IntDir>
+    <NMakeBuildCommandLine>set VCINSTALLDIR=$(VCInstallDir)
+set VSINSTALLDIR=$(VSInstallDir)
+set WindowsSdkDir=$(FrameworkSDKDir)
+nmake DEBUG=1 TARGET=ia32e </NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>set VCINSTALLDIR=$(VCInstallDir)
+set VSINSTALLDIR=$(VSInstallDir)
+set WindowsSdkDir=$(FrameworkSDKDir)
+nmake DEBUG=1 TARGET=ia32e clean
+nmake DEBUG=1 TARGET=ia32e
+</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>set VCINSTALLDIR=$(VCInstallDir)
+set VSINSTALLDIR=$(VSInstallDir)
+set WindowsSdkDir=$(FrameworkSDKDir)
+nmake DEBUG=1 TARGET=ia32e clean</NMakeCleanCommandLine>
+    <NMakeOutput>Bin\pin.exe</NMakeOutput>
+    <IncludePath>..\..\include\pin\gen;..\..\include\pin;$(IncludePath)</IncludePath>
+    <NMakePreprocessorDefinitions>TARGET_WINDOWS;TARGET_IA32E</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\build\PinTools\</OutDir>
+    <IntDir>..\build\PinTools\</IntDir>
+    <NMakeBuildCommandLine>set VCINSTALLDIR=$(VCInstallDir)
+set VSINSTALLDIR=$(VSInstallDir)
+set WindowsSdkDir=$(FrameworkSDKDir)
+nmake TARGET=ia32</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>set VCINSTALLDIR=$(VCInstallDir)
+set VSINSTALLDIR=$(VSInstallDir)
+set WindowsSdkDir=$(FrameworkSDKDir)
+nmake TARGET=ia32 clean
+nmake TARGET=ia32 </NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>set VCINSTALLDIR=$(VCInstallDir)
+set VSINSTALLDIR=$(VSInstallDir)
+set WindowsSdkDir=$(FrameworkSDKDir)
+nmake TARGET=ia32 clean</NMakeCleanCommandLine>
+    <NMakeOutput>Bin\pin.exe</NMakeOutput>
+    <IncludePath>..\..\include\pin\gen;..\..\include\pin;$(IncludePath)</IncludePath>
+    <NMakePreprocessorDefinitions>TARGET_WINDOWS;TARGET_IA32</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\build\PinTools\</OutDir>
+    <IntDir>..\build\PinTools\</IntDir>
+    <NMakeBuildCommandLine>set VCINSTALLDIR=$(VCInstallDir)
+set VSINSTALLDIR=$(VSInstallDir)
+set WindowsSdkDir=$(FrameworkSDKDir)
+nmake TARGET=ia32e DEBUG=0</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>set VCINSTALLDIR=$(VCInstallDir)
+set VSINSTALLDIR=$(VSInstallDir)
+set WindowsSdkDir=$(FrameworkSDKDir)
+nmake TARGET=ia32e clean
+nmake TARGET=ia32e DEBUG=0</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>set VCINSTALLDIR=$(VCInstallDir)
+set VSINSTALLDIR=$(VSInstallDir)
+set WindowsSdkDir=$(FrameworkSDKDir)
+nmake TARGET=ia32e DEBUG=0 clean</NMakeCleanCommandLine>
+    <NMakeOutput>Bin\pin.exe</NMakeOutput>
+    <IncludePath>..\..\include\pin\gen;..\..\include\pin;$(IncludePath)</IncludePath>
+    <NMakePreprocessorDefinitions>TARGET_WINDOWS;TARGET_IA32E</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="bsr_bsf.cpp" />
+    <ClCompile Include="bsr_bsf_app.cpp" />
+    <ClCompile Include="calltrace.cpp" />
+    <ClCompile Include="catmix.cpp" />
+    <ClCompile Include="coco.cpp" />
+    <ClCompile Include="dcache.cpp" />
+    <ClCompile Include="edgcnt.cpp" />
+    <ClCompile Include="emuload.cpp" />
+    <ClCompile Include="extmix.cpp" />
+    <ClCompile Include="fence.cpp" />
+    <ClCompile Include="get_source_app.cpp" />
+    <ClCompile Include="get_source_location.cpp" />
+    <ClCompile Include="icount.cpp" />
+    <ClCompile Include="ilenmix.cpp" />
+    <ClCompile Include="inscount2_mt.cpp" />
+    <ClCompile Include="inscount2_vregs.cpp" />
+    <ClCompile Include="jumpmix.cpp" />
+    <ClCompile Include="ldstmix.cpp" />
+    <ClCompile Include="malloctrace.cpp" />
+    <ClCompile Include="opcodemix.cpp" />
+    <ClCompile Include="oper-imm.cpp" />
+    <ClCompile Include="oper_imm_app.cpp" />
+    <ClCompile Include="pinatrace.cpp" />
+    <ClCompile Include="regmix.cpp" />
+    <ClCompile Include="regval.cpp" />
+    <ClCompile Include="regval_app.cpp" />
+    <ClCompile Include="topopcode.cpp" />
+    <ClCompile Include="toprtn.cpp" />
+    <ClCompile Include="trace.cpp" />
+    <ClCompile Include="xed-print.cpp" />
+    <ClCompile Include="xed-use.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bsr_bsf_asm.asm" />
+    <None Include="oper_imm_asm.asm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dcache.H" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
